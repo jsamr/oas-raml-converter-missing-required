@@ -1,0 +1,51 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Bug report",
+    "version": "1.0"
+  },
+  "servers": [],
+  "paths": {},
+  "components": {
+    "schemas": {
+      "Foo": {
+        "type": "object",
+        "properties": {
+          "foo1": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "foo1"
+        ]
+      },
+      "BarFromFoo": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Foo"
+          },
+          {
+            "properties": {
+              "bar1": {
+                "type": "string"
+              },
+              "bar2": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "type": "string"
+      }
+    },
+    "responses": {},
+    "parameters": {},
+    "examples": {},
+    "requestBodies": {},
+    "headers": {},
+    "securitySchemes": {},
+    "links": {},
+    "callbacks": {}
+  }
+}
